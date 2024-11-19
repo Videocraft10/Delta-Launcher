@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delta-Launcher", "Delta-Launcher\Delta-Launcher.csproj", "{DB430269-CEC0-4A1F-AF11-E366EFEBD49B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB430269-CEC0-4A1F-AF11-E366EFEBD49B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB430269-CEC0-4A1F-AF11-E366EFEBD49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB430269-CEC0-4A1F-AF11-E366EFEBD49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB430269-CEC0-4A1F-AF11-E366EFEBD49B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
