@@ -22,9 +22,35 @@ namespace Delta_Launcher
         {
             InitializeComponent();
 
+        }
 
+        private void MinimizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        // Add this to enable window dragging
+
+        private void TitleBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            // Ensure left mouse button is pressed before calling DragMove
+            if (e.ButtonState == MouseButtonState.Pressed)
+            {
+                try
+                {
+                    this.DragMove();
+                }
+                catch (InvalidOperationException ex)
+                {
+                    // Optionally handle the exception (log, notify user, etc.)
+                    System.Diagnostics.Debug.WriteLine($"DragMove error: {ex.Message}");
+                }
+            }
         }
     }
-    
-    public class MainForm : Form
-}
+}    

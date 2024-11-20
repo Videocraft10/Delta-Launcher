@@ -5,8 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Delta_Launcher"
         mc:Ignorable="d"
-        Title="Delta Launcher" Height="700" Width="1200">
-    <Grid>
+        Title="Delta Launcher" Height="700" Width="1200"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Black">
+        
+    <Window.Resources>
+        <!-- Add any additional resources/styles here -->
+    </Window.Resources>
 
-    </Grid>
+    <Border BorderThickness="1" BorderBrush="#FF404040">
+        <Grid>
+            <!-- Custom title bar -->
+            <Grid Height="30" VerticalAlignment="Top" Background="Transparent"
+                  MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
+                <!-- Title -->
+                <TextBlock Text="{Binding Title, RelativeSource={RelativeSource AncestorType=Window}}"
+                           Foreground="White"
+                           Margin="10,0,0,0"
+                           VerticalAlignment="Center"/>
+
+                <!-- Window buttons -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Width="45" Height="30" Click="MinimizeButton_Click"
+                            Background="Transparent" BorderThickness="0">
+                        <Path Data="M0,6 H10" Stroke="White" StrokeThickness="1" 
+                              HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Button>
+                    <Button Width="45" Height="30" Click="CloseButton_Click"
+                            Background="Transparent" BorderThickness="0">
+                        <Path Data="M0,0 L10,10 M0,10 L10,0" Stroke="White" StrokeThickness="1"
+                              HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <!-- Your main content goes here -->
+            <Grid Margin="0,30,0,0">
+                <!-- Add your content here -->
+            </Grid>
+        </Grid>
+    </Border>
 </Window>
