@@ -41,6 +41,10 @@
                                Foreground="Black" FontSize="24">
                         Delta Launcher!!
                     </TextBlock>
+                    <Button VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="150" Height="50" 
+                            Content= "Play" FontSize= "24" Margin="0,0,0,100"
+                            Click="OpenGame_Click" >
+                    </Button>
                 </Grid>
             </Grid>
         </Border>

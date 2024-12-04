@@ -52,5 +52,14 @@ namespace Delta_Launcher
                 }
             }
         }
+
+        private void OpenGame_Click(object sender, RoutedEventArgs e)
+        {
+            if MouseButtonState.Pressed=true
+                
+            {
+                
+            }
+        }
     }
 }    
