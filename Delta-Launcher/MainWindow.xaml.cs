@@ -10,6 +10,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Delta_Launcher
 {
@@ -55,10 +56,22 @@ namespace Delta_Launcher
 
         private void OpenGame_Click(object sender, RoutedEventArgs e)
         {
-            
+            // Path to the executable file you want to run
+            string filePath = @"C:\Users\franco.jourdan\Downloads\JetBrains.Rider-2024.3.exe"; // Change this to the path of your .exe file
+
+            try
             {
-                
+                // Start the executable file
+                Process.Start(filePath);
+
+                // Log success message to the console
+                Console.WriteLine($"Successfully launched: {filePath}");
+            }
+            catch (Exception ex)
+            {
+                // If there's an error, log the error message
+                Console.WriteLine($"Error launching file: {ex.Message}");
             }
         }
     }
-}    
+}
