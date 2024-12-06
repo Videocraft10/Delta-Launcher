@@ -56,21 +56,25 @@ namespace Delta_Launcher
 
         private void OpenGame_Click(object sender, RoutedEventArgs e)
         {
+            InitializeComponent();
+            this.WindowState = WindowState.Minimized;
+            
+            
             // Path to the executable file you want to run
-            string filePath = @"C:\Users\franco.jourdan\Downloads\JetBrains.Rider-2024.3.exe"; // Change this to the path of your .exe file
+            //string filePath = @"C:\Users\franco.jourdan\Downloads\JetBrains.Rider-2024.3.exe"; // Change this to the path of your .exe file
 
-            try
+            //try
             {
                 // Start the executable file
-                Process.Start(filePath);
+                //Process.Start(filePath);
 
                 // Log success message to the console
-                Console.WriteLine($"Successfully launched: {filePath}");
+                //Console.WriteLine($"Successfully launched: {filePath}");
             }
-            catch (Exception ex)
+            //catch (Exception ex)
             {
                 // If there's an error, log the error message
-                Console.WriteLine($"Error launching file: {ex.Message}");
+                //Console.WriteLine($"Error launching file: {ex.Message}");
             }
         }
     }
